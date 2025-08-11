@@ -8,7 +8,7 @@ An interactive web application built using Python and Streamlit predicts student
 Note: This model is intended for research and demonstration purposes only. Due to differences in assessment standards, curricula, school quality, and cultural contexts, these predictions cannot be directly applied to student evaluations outside the context of the dataset.
 
 ## Project Overview
-Student test performance is influenced by both internal and external factors. This app helps teachers and educators identify early on the likelihood that students will score below the required standard. By combining relevant internal and external factors with a trained machine learning regression model, the app provides accurate score predictions to support targeted interventions and improve learning outcomes.
+Student test scores are influenced by internal and external factors. This app helps teachers and educators identify early on the likelihood that students will score below the required standard. By using internal and external factors correlated with test scores with a trained machine learning regression model, the app provides accurate score predictions to support targeted interventions and improve learning outcomes.
 
 ## Application Preview
 This application provides two data input methods:
