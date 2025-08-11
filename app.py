@@ -5,7 +5,7 @@ import joblib
 
 st.set_page_config(page_title="Prediksi Nilai Ujian Siswa / Student Performance Prediction", layout="wide")
 
-# === Text Dictionary ===
+# Text
 TEXT = {
     "Indonesia": {
         "title": "Prediksi Nilai Ujian Siswa",
@@ -91,17 +91,17 @@ TEXT = {
     }
 }
 
-# === Pilihan Bahasa ===
+# Language
 lang = st.radio(TEXT["Indonesia"]["lang_select"] + " / " + TEXT["English"]["lang_select"], ["Indonesia", "English"])
 
-# === Judul dan Info ===
+# Title and Infomation
 st.markdown(f"<h1 style='color:#2c3e50;'>{TEXT[lang]['title']}</h1>", unsafe_allow_html=True)
 st.info(TEXT[lang]['info'])
 
-# === Pilihan Metode Input ===
+# input method selection
 mode = st.radio(TEXT[lang]['input_method'], [TEXT[lang]['manual'], TEXT[lang]['upload']])
 
-# === Load Model, PCA, Scaler ===
+# Load
 @st.cache_resource
 def load_model():
     return joblib.load("model/model_rf.pkl")
@@ -118,7 +118,7 @@ model = load_model()
 pca = load_pca()
 scaler = load_scaler()
 
-# === Manual Input ===
+# Manual Input
 if mode == TEXT[lang]['manual']:
     with st.form("prediction_form"):
         st.subheader(TEXT[lang]['form_title'])
@@ -179,7 +179,7 @@ if mode == TEXT[lang]['manual']:
             st.success(TEXT[lang]['success'])
             st.metric(label=TEXT[lang]['predicted_score'], value=f"{pred:.2f}")
 
-# === Upload File ===
+# Upload File
 else:
     st.subheader(TEXT[lang]['upload_title'])
     uploaded_file = st.file_uploader(TEXT[lang]['upload_info'], type=["csv", "xlsx"])
