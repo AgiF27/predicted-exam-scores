@@ -1,7 +1,9 @@
 # Student Exam Score Prediction Web Application using Python and Streamlit
 
 ## Project Information 
-An interactive web application built using Python and Streamlit predicts student exam scores based on factors correlated with exam scores, such as hours studied, attendance, parental involvement, access to resources, previous scores, tutoring sessions, and parental education level. Furthermore, the application considers nominal categorical factors such as learning disabilities, gender, extracurricular activities, internet access, school type, and peer influence. A regression model based on the Random Forest algorithm is used to generate accurate predictions, with an MSE value of 3.159578 on the test data, thus supporting targeted interventions and improving student learning outcomes. The application uses the Student Performance dataset from Kaggle and a regression model trained on historical data from several schools in India to generate predictions.
+An interactive web application built using Python and Streamlit predicts student exam scores based on factors correlated with exam scores, such as hours studied, attendance, parental involvement, access to resources, previous scores, tutoring sessions, and parental education level. Furthermore, the application considers nominal categorical factors such as learning disabilities, gender, extracurricular activities, internet access, school type, and peer influence. A regression model based on the Random Forest algorithm is used to generate accurate predictions, with an MSE value of 3.159578 on the test data, thus supporting targeted interventions and improving student learning outcomes. The application uses the Student Performance dataset from [Kaggle](https://www.kaggle.com/datasets/lainguyn123/student-performance-factors). 
+
+[Click here to open the Streamlit app](https://predicted-exam-scores.streamlit.app/)
 
 Note: This model is intended for research and demonstration purposes only. Due to differences in assessment standards, curricula, school quality, and cultural contexts, these predictions cannot be directly applied to student evaluations outside the context of the dataset.
 
